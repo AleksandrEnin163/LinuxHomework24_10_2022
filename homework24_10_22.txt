@@ -1,0 +1,32 @@
+   0 vi sleeper.sh
+	!#/bin/bash
+	for run in {1..10}
+	do
+	date +"%H:%M:%S"
+	ps -ef | grep : | wc -l
+	sleep 5
+	done
+   1 vi sleeper.sh 
+	!#/bin/bash
+	for run in {1..10}
+	do
+	date +"%H:%M:%S"
+	ps -ef | grep : | wc -l
+	#sleep 5
+	done
+   2 vi infoproc.sh
+	!#/bin/bash
+	cat /etc/os-release >> /root/processor.txt
+   3 vi infosystem.sh
+	!#/bin/bash
+	cat /etc/os-release | head -1 >> /root/system.txt
+   4 vi infosystem.sh
+	!#/bin/bash 
+	#cat /etc/os-release | head -1 >> /root/system.txt
+	cat /etc/os-release | grep -o | head -1  >> /root/system.txt
+   5 vi makefiles.sh
+	!#/bin/bash
+	for run in {50..100}
+	do
+	touch $run.txt /root
+	done
